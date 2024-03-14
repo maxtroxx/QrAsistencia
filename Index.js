@@ -1,6 +1,6 @@
 // Función para iniciar el escaneo del código QR
 function iniciarEscaneo() {
-     var scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+    var scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
     scanner.addListener('scan', function (contenidoQR) {
         // Una vez que se escanea el código QR, se envían los datos a Google Sheets
         enviarDatosAGoogleSheets(contenidoQR);
@@ -30,7 +30,7 @@ function enviarDatosAGoogleSheets(contenidoQR) {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: datos
-        
+
     })
     .then(function(response) {
         if (response.ok) {
